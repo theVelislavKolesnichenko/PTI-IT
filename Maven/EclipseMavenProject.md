@@ -6,7 +6,9 @@ Location : http://download.eclipse.org/technology/m2e/releases
 
 Може да се изтегли версия на Eclipse IDE е поддръжка за web приложения на Java която съдържа Mavan:
 
-https://www.eclipse.org/downloads/packages/ https://tomcat.apache.org/download-90.cgi
+https://www.eclipse.org/downloads/packages/ 
+
+https://tomcat.apache.org/download-90.cgi
 
 ## Създаване на нов проект 
 
