@@ -4,7 +4,7 @@ Eclipse поддържа разширение за работа с Maven, кое
 Name : M2Eclipse
 Location : http://download.eclipse.org/technology/m2e/releases
 
-Може да се изтегли версия на Eclipse IDE е поддръжка за web приложения на Java която съдържа Mavan:
+Може да се изтегли версия на Eclipse IDE с поддръжка за web приложения на Java която съдържа Mavan:
 
 https://www.eclipse.org/downloads/packages/ 
 
