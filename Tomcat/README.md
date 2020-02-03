@@ -62,6 +62,21 @@ http://localhost:8080/
 
 Ако всичко е наред, ще се появи заглавната страница на Tomcat. 
 
+# Web проект
+
+Добавяне на java web зависимост 
+
+``
+  <dependencies>
+    <dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>4.0.1</version>
+	    <scope>provided</scope>
+    </dependency>
+  </dependencies>
+``
+
 # Задача
 
 1. Стартираите услугата Tomcat от директория "..." с помоща на PowerShell. Проверете успешно ли е преминало стартирането, като отворите началната страница на Tomcat он вашия локален компютър.
