@@ -42,15 +42,10 @@ F:\DevTools\apache-tomcat-9.0.27\bin.
 ### PowerShell команди за стартиране на Tomcat service под Windows.
 
 ``` PowerShell
-./service.bat install pit-it <# инсталира Tomcat service в Windows services. pti-it - името на услугата в Windows #>
 
-Get-Service <# извлича всички services в Windows #>
+./startup.bat <# стартира Tomcat service като програма в Wondows #>
 
-Get-Service -Name "pti-it" <# извлича service в Windows  по име #>
-
-Start-Service "pti-it" <# стартира service в Windows по име #>
-
-./service.bat remove <# изтрива Tomcat service от Windows Services. pti-it - името на услугата в Windows #>
+./shutdown.bat <# спита програмата Tomcat service #>
 
 ```
 
@@ -61,25 +56,6 @@ Start-Service "pti-it" <# стартира service в Windows по име #>
 http://localhost:8080/
 
 Ако всичко е наред, ще се появи заглавната страница на Tomcat. 
-
-# Web проект
-
-Добавяне на java web зависимост 
-
-```
-  <dependencies>
-    <dependency>
-	    <groupId>javax.servlet</groupId>
-	    <artifactId>javax.servlet-api</artifactId>
-	    <version>4.0.1</version>
-	    <scope>provided</scope>
-    </dependency>
-  </dependencies>
-```
-
-# Стартиране на проект
-
-Избирате проекта, 
 
 # Задача
 
@@ -97,15 +73,37 @@ vCard
     |   |-- main.css
 ```
 
-Направете заглавна страница на вашето CV.
+Направете страница за публичния профила на потребител.
 
-3. Създайте Maven Web Project. Създайте същите структора като на vCard. 
+3. Спрете Tomcat.
+
+# Web проект
+
+Когато се създава Web Maven Project се използва архитипа maven-archetype-webapp. Проекта има следната структора:
+
+<-- СНИМКА НА СТРУКТОРАТА -->
+
+Web приложения в JAVA се изграждат с servlet-api за което трябва да се добави зависимост в pom.xml файла на проекта 
+
+```
+  <dependencies>
+    <dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>4.0.1</version>
+	    <scope>provided</scope>
+    </dependency>
+  </dependencies>
+```
+
+# Стартиране на проект
+
+Избирате проекта, от бутона run изберете Run on server настройте пътя до Tomcat, за да се използва като сървър за изпълнение на приложенията. За Server name запишете Tomcat v9.0 Server at <факлтетния ви новер>
+
+# Задача
+
+4. Създайте Maven Web Project. Създайте същата структора като на vCard. 
 - Публикувайте проекта.
 - Променете цвета на фона. Презаредете страницата в браузъра. Какво се вихжа ? 
 - Публикувайте проекта. Презаредете страницата в браузъра. Има ли разлика ? 
 
-4. Позволете достъпа по HTTP до Tomcat сървъра на вашия компютър.
-
-5. Забранете достъпа по HTTP до Tomcat сървъра на вашия компютър.
-
-6. Спрете услугата Tomcat. Проверете, че е спряна успешно.
