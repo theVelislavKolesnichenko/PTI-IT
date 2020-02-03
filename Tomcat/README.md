@@ -66,7 +66,7 @@ http://localhost:8080/
 
 Добавяне на java web зависимост 
 
-``
+```
   <dependencies>
     <dependency>
 	    <groupId>javax.servlet</groupId>
@@ -75,7 +75,7 @@ http://localhost:8080/
 	    <scope>provided</scope>
     </dependency>
   </dependencies>
-``
+```
 
 # Задача
 
