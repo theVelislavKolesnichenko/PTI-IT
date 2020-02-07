@@ -16,15 +16,15 @@ https://tomcat.apache.org/download-90.cgi
 
 File -> New Maven Project
 
-![step1.png](Maven/Image/step1.png)
+![step1](https://user-images.githubusercontent.com/10382663/74010406-15e90d80-498e-11ea-837a-9db8a110ed3e.png)
 
 - От първия прозорец се избира директория на проекта:
 
-![step1.png](Maven/Image/step2.png)
+![step2](https://user-images.githubusercontent.com/10382663/74010425-24372980-498e-11ea-8014-3a28b5514b8a.png)
 
 - От втория прозорец се избира типа на проекта, първия тип който ще направим е "maven-archetype-quickstart"
 
-![step1.png](Maven/Image/step3.png)
+![step3](https://user-images.githubusercontent.com/10382663/74010426-24cfc000-498e-11ea-9c2f-098132eeee39.png)
 
 - От третия прозорец се въвежда groupId, artifactId и version
 
