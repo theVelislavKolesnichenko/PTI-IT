@@ -3,9 +3,9 @@
 
 ## 1 Лабораторно упражнение:
 
-### [ООП quiz](https://forms.office.com/Pages/ResponsePage.aspx?id=QWmIMYaKk0-PQtFA6uo2rY8g6cMukr1NlbD5t2NQ1mhUNTU0SDhIMFlGSVg4NFNVMElXTTlGSjNMNi4u)
+### [ООП quiz](https://forms.office.com/Pages/ResponsePage.aspx?id=QWmIMYaKk0-PQtFA6uo2rY8g6cMukr1NlbD5t2NQ1mhUQlU2SFZIVUhNN1EyVzJPTEZCUFM0OVUxSi4u)
 
-[<img src="https://user-images.githubusercontent.com/10382663/74089539-b6345480-4aaa-11ea-9d34-fc1eac456f32.png" width="200" height="200">](https://forms.office.com/Pages/ResponsePage.aspx?id=QWmIMYaKk0-PQtFA6uo2rY8g6cMukr1NlbD5t2NQ1mhUNTU0SDhIMFlGSVg4NFNVMElXTTlGSjNMNi4u)
+[<img src="https://user-images.githubusercontent.com/10382663/74181427-fa119000-4c49-11ea-9d8e-34f6472a4702.png width="200" height="200">](https://forms.office.com/Pages/ResponsePage.aspx?id=QWmIMYaKk0-PQtFA6uo2rY8g6cMukr1NlbD5t2NQ1mhUQlU2SFZIVUhNN1EyVzJPTEZCUFM0OVUxSi4u)
 
 [Maven](Maven)
 
