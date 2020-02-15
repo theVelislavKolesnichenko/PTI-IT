@@ -15,7 +15,7 @@ Tomcat
 
 Maven web project
 
-[Задача](../Tasks/Task1.md)
+[Задача](Tasks/Task1.md)
 
 ## 3 Лабораторно упражнение:
 
