@@ -11,9 +11,9 @@
 
 ## 2 Лабораторно упражнение:
 
-Tomcat
+[Tomcat](Tomcat)
 
-Maven web project
+[Maven web project](Maven/EclipseMavenWebProject.md)
 
 [Задача](Tasks/Task1.md)
 
