@@ -5,8 +5,6 @@
 
 ### [ООП quiz](https://forms.office.com/Pages/ResponsePage.aspx?id=QWmIMYaKk0-PQtFA6uo2rY8g6cMukr1NlbD5t2NQ1mhUQlU2SFZIVUhNN1EyVzJPTEZCUFM0OVUxSi4u)
 
-[<img src="https://user-images.githubusercontent.com/10382663/74181427-fa119000-4c49-11ea-9d8e-34f6472a4702.png" width="200" height="200">](https://forms.office.com/Pages/ResponsePage.aspx?id=QWmIMYaKk0-PQtFA6uo2rY8g6cMukr1NlbD5t2NQ1mhUQlU2SFZIVUhNN1EyVzJPTEZCUFM0OVUxSi4u)
-
 [Maven](Maven)
 
 [Maven проект в Eclipse](Maven/EclipseMavenProject.md)
@@ -16,6 +14,8 @@
 Tomcat
 
 Maven web project
+
+[Задача](../Tasks/Task1.md)
 
 ## 3 Лабораторно упражнение:
 
