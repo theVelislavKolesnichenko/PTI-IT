@@ -10,7 +10,7 @@ ITWebApplication
     |   `-- resources
     |           `-- css
     |                `-- main.css
-    |           `-- image
+    |           `-- images
     |                `-- male.svg
     |                `-- woman.svg
     |    `-- webapp
