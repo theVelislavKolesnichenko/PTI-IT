@@ -13,7 +13,7 @@
 
 ### [HTML quiz](https://forms.office.com/Pages/ResponsePage.aspx?id=QWmIMYaKk0-PQtFA6uo2rY8g6cMukr1NlbD5t2NQ1mhUQzVBSDdOMEM5RjNTVUM1RDg3MFNWVjVaUS4u)
 
-[<img src="https://user-images.githubusercontent.com/10382663/74609377-45b4b580-50f2-11ea-9327-aaabc828a777.png"/>](https://forms.office.com/Pages/ResponsePage.aspx?id=QWmIMYaKk0-PQtFA6uo2rY8g6cMukr1NlbD5t2NQ1mhUQzVBSDdOMEM5RjNTVUM1RDg3MFNWVjVaUS4u)
+[<img height=150 width=150 src="https://user-images.githubusercontent.com/10382663/74609377-45b4b580-50f2-11ea-9327-aaabc828a777.png"/>](https://forms.office.com/Pages/ResponsePage.aspx?id=QWmIMYaKk0-PQtFA6uo2rY8g6cMukr1NlbD5t2NQ1mhUQzVBSDdOMEM5RjNTVUM1RDg3MFNWVjVaUS4u)
 
 [Tomcat](Tomcat)
 
