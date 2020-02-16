@@ -8,6 +8,11 @@ ITWebApplication
 `-- src
     |-- main
     |   `-- resources
+    |           `-- css
+    |                `-- main.css
+    |           `-- image
+    |                `-- male.svg
+    |                `-- woman.svg
     |    `-- webapp
     |           `-- index.jsp
     |   `-- WEB-INF
