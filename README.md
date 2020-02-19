@@ -11,9 +11,9 @@
 
 ## 2 Лабораторно упражнение:
 
-### [HTML quiz](https://forms.office.com/Pages/ResponsePage.aspx?id=QWmIMYaKk0-PQtFA6uo2rY8g6cMukr1NlbD5t2NQ1mhUMFIyRkhONlczRk04SkM2UVVYS1lPTjRGTC4u)
+### [HTML quiz](https://forms.office.com/Pages/ResponsePage.aspx?id=QWmIMYaKk0-PQtFA6uo2rY8g6cMukr1NlbD5t2NQ1mhUMjgxSjNDMEVIVFQ1TjRaSE9TR0JXVExGOS4u)
 
-[<img src="https://user-images.githubusercontent.com/10382663/74676858-a4943080-51bf-11ea-85e8-5e84415a66b3.png" width="200" height="200">](https://forms.office.com/Pages/ResponsePage.aspx?id=QWmIMYaKk0-PQtFA6uo2rY8g6cMukr1NlbD5t2NQ1mhUMFIyRkhONlczRk04SkM2UVVYS1lPTjRGTC4u)
+[<img src="https://user-images.githubusercontent.com/10382663/74801473-63933d80-52df-11ea-8c0c-f6259d622ed3.png" width="200" height="200">](https://forms.office.com/Pages/ResponsePage.aspx?id=QWmIMYaKk0-PQtFA6uo2rY8g6cMukr1NlbD5t2NQ1mhUMjgxSjNDMEVIVFQ1TjRaSE9TR0JXVExGOS4u)
 
 [Tomcat](Tomcat)
 
