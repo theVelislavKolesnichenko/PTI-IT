@@ -27,7 +27,7 @@
 
 [Жизнен цикъл на сървлета](Servlet/LifeCycle.md)
 
-[Създаване на сървлети](Servlet/CreateServlet.md)
+[Създаване на сървлети](Servlet/Create.md)
 
 [Обработване на клиентски заявки](Servlet/RequestResponse.md)
 
