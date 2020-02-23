@@ -45,7 +45,7 @@ F:\DevTools\apache-tomcat-9.0.27\bin.
 
 ./startup.bat <# стартира Tomcat service като програма в Wondows #>
 
-./shutdown.bat <# спита програмата Tomcat service #>
+./shutdown.bat <# спира програмата Tomcat service #>
 
 ```
 
