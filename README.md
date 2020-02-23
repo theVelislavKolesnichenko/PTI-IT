@@ -23,7 +23,13 @@
 
 ## 3 Лабораторно упражнение:
 
-Servlet
+[Въведение в Java Servlet](Servlet)
+
+[Жизнен цикъл на сървлета](Servlet/LifeCycle.md)
+
+[Създаване на сървлети](Servlet/CreateServlet.md)
+
+[Обработване на клиентски заявки](Servlet/RequestResponse.md)
 
 [Задача](Tasks/Task2.md)
 
