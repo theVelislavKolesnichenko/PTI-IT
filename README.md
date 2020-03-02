@@ -25,49 +25,45 @@
 
 [<img src="https://user-images.githubusercontent.com/10382663/75115235-3343fa00-5665-11ea-8f55-2c6686310aa6.png" width="200" height="200">](https://forms.office.com/Pages/ResponsePage.aspx?id=QWmIMYaKk0-PQtFA6uo2rY8g6cMukr1NlbD5t2NQ1mhUNEZUVFUxTjVWOTdKUlhQQUtTSjdXUVU3UC4u)
 
-
-
 [Въведение в Java Servlet](Servlet)
 
 [Жизнен цикъл на сървлета](Servlet/LifeCycle.md)
 
 [Създаване на сървлети](Servlet/Create.md)
 
-[Обработване на клиентски заявки](Servlet/RequestResponse.md)
-
-[Задача](Tasks/Task2.md)
-
 ## 4 Лабораторно упражнение:
 
-JavaBeans
-
-JSP
+[Обработване на клиентски заявки](Servlet/RequestResponse.md)
 
 [Задача](Tasks/Task2.md)
 
 ## 5 Лабораторно упражнение:
 
-Servlet, JSP, HTML форми 
+JavaBeans
+
+JSP
+
+[Задача](Tasks/Task3.md)
 
 ## 6 Лабораторно упражнение:
 
-Контролно
+Servlet, JSP, HTML форми 
 
 ## 7 Лабораторно упражнение:
 
-Сесия, Cookies
+Контролно
 
 ## 8 Лабораторно упражнение:
 
-Филтри
+Сесия, Cookies
 
 ## 9 Лабораторно упражнение:
 
-JSTL
+Филтри
 
 ## 10 Лабораторно упражнение:
 
-Custom Tags
+JSTL, Custom Tags
 
 ## 11 Лабораторно упражнение:
 
