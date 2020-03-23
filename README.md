@@ -37,6 +37,8 @@
 
 [JSP](Servlet/JSP.md)
 
+[Пренасочване](Servlet/Redirect.md)
+
 [Задача](Tasks/Task3.md)
 
 ## 5 Лабораторно упражнение:
