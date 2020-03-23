@@ -7,13 +7,13 @@ ITWebApplication
 |-- pom.xml
 `-- src
     |-- main
-    |   `-- resources
-    |           `-- css
-    |                `-- main.css
+    |    `-- webapp
+    |		`-- resources
+    |           	`-- css
+    |                	`-- main.css
     |           `-- images
     |                `-- male.svg
     |                `-- woman.svg
-    |    `-- webapp
     |           `-- index.jsp
     |   `-- WEB-INF
     |         `-- web.xml
