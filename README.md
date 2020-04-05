@@ -51,17 +51,17 @@
 
 ## 7 Лабораторно упражнение:
 
-[Филтри](Servlet/Filter.md)
+[Проследяване на сесии](Servlet/Session.md)
 
-[Прихващане на грешки](Servlet/Error.md)
+[Управление на бисквитки](Servlet/Cookies.md)
 
 [Задача](Tasks/Task5.md)
 
 ## 8 Лабораторно упражнение:
 
-[Управление на бисквитки](Servlet/Cookies.md)
+[Филтри](Servlet/Filter.md)
 
-[Проследяване на сесии](Servlet/Session.md)
+[Прихващане на грешки](Servlet/Error.md)
 
 [Задача](Tasks/Task6.md)
 
