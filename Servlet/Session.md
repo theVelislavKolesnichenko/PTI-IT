@@ -42,4 +42,6 @@ HttpSession session = request.getSession();
 - ```public void invalidate()``` - Прави сесията недействителна и след това развързва всички свързани с нея обекти.
 - ```public void setAttribute(String name, Object value)``` - Този метод поставя обект към тази сесия, като използва посоченото име.
 - ```public Object getAttribute(String name)``` - Този метод връща обекта, свързан с посоченото име в тази сесия, или null, ако никой обект не е обвързан под името.
-- 
+- ```public int getMaxInactiveInterval()``` - извлича времето в секунди до изтичане на сесията
+- ```public void setMaxInactiveInterval(int interval)``` - Този метод задава времето, в секунди, между клиентски заявки преди контейнер servlet ще анулира тази сесия.
+- ```public void removeAttribute(String name)``` - Този метод премахва променлива от сесията
