@@ -77,7 +77,7 @@
 
 [XML](JAXB/xml.md)
 
-[AJAX](JAXB)
+[JAXB](JAXB)
 
 [Задача](Tasks/Task8.md)
 
