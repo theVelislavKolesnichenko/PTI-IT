@@ -8,6 +8,16 @@ Annotation | Description
 @XmlType(propOrder = { "field2", "field1",.. }) | Позволява да се определи редът, в който полетата се записват във XML файла
 @XmlElement(name = "neuName") | Определете XML елемента, който ще бъде използван. Трябва да се използва само ако името на XML елемента е различен от името на JavaBeans
 
+## JAXB библиотека
+
+```xml
+<dependency>
+    <groupId>javax.xml.bind</groupId>
+    <artifactId>jaxb-api</artifactId>
+    <version>2.2.8</version>
+</dependency>
+```
+
 ## Дефиниране на клас моделиращ данните в XML файла
 
 ```java
