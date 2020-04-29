@@ -27,6 +27,8 @@ Annotation | Description
 public class Student {
 
     private String name;
+    //Ако името на променливата не е подходящо за записване в XML файл, можете лесно да се промените
+    @XmlElement(name = "fakNum")
     private String number;
     private String specialty;
 
@@ -38,8 +40,6 @@ public class Student {
         this.name = name;
     }
 
-    //Ако името на променливата не е подходящо за записване в XML файл, можете лесно да се промените
-    @XmlElement(name = "fakNum")
     public String getNumber() {
         return number;
     }
@@ -121,7 +121,7 @@ public void writeToXMLFile(String xmlFile, Group group) {
 ## Записване от XML файл
 
 ```java
-public Group рeaderФромXMLFile(String xmlFile) {
+public Group readerFromXMLFile(String xmlFile) {
 
     // Създаване на JAXB контекст
     JAXBContext context = JAXBContext.newInstance(Group.class);
