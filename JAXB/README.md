@@ -16,12 +16,19 @@ Annotation | Description
     <artifactId>jaxb-api</artifactId>
     <version>2.2.8</version>
 </dependency>
+<!--ЗА РАБОТА С JAXB от JAVA 9 нагоре-->
+<dependency>
+  <groupId>org.glassfish.jaxb</groupId>
+  <artifactId>jaxb-runtime</artifactId>
+  <version>2.3.1</version>
+</dependency>
 ```
 
 ## Дефиниране на клас моделиращ данните в XML файла
 
 ```java
 @XmlRootElement(name = "student")
+@XmlAccessorType(XmlAccessType.FIELD)
 // Не е задължително но ако искате, можете да определите реда, в който да се запишат полетата
 @XmlType(propOrder = { "fakNum", "name", "specialty")
 public class Student {
@@ -63,6 +70,7 @@ public class Student {
 ```java
 //Тази анотация означава, че клас "Group.java" е основният елемент на файла
 @XmlRootElement(namespace = "de.vogella.xml.jaxb.model")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Group {
 
     // XmLElementWrapper генерира обвиващ елемент около XML елементите, родителския елемент
