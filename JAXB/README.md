@@ -69,7 +69,7 @@ public class Student {
 
 ```java
 //Тази анотация означава, че клас "Group.java" е основният елемент на файла
-@XmlRootElement(namespace = "de.vogella.xml.jaxb.model")
+@XmlRootElement(name = "group")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Group {
 
