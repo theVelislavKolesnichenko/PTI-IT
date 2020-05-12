@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fruits>
+	<fruit>
+		<name>orange</name>
+		<type>a</type>
+		<count>10</count>
+	</fruit>
+	<fruit>
+		<name>banana</name>
+		<type>b</type>
+		<count>20</count>
+	</fruit>
+	<fruit>
+		<name>kiwi</name>
+		<type>c</type>
+		<count>50</count>
+	</fruit>
+</fruits>
