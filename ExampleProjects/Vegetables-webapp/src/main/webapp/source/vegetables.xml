@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<vegetables>
+    <vegetable>
+        <name>Vegetable 3</name>
+        <count>1</count>
+        <price>3.0</price>
+    </vegetable>
+    <vegetable>
+        <name>Vegetable 2</name>
+        <count>2</count>
+        <price>2.0</price>
+    </vegetable>
+    <vegetable>
+        <name>Vegetable 1</name>
+        <count>1</count>
+        <price>1.0</price>
+    </vegetable>
+</vegetables>

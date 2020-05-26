@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pets>
+	<pet>
+		<name>St. Bernard</name>
+		<type>Dog</type>
+		<count>10</count>
+	</pet>
+	<pet>
+		<name>Egyptian</name>
+		<type>Cat</type>
+		<count>15</count>
+	</pet>
+	<pet>
+		<name>Gold</name>
+		<type>Fish</type>
+		<count>20</count>
+	</pet>
+</pets>

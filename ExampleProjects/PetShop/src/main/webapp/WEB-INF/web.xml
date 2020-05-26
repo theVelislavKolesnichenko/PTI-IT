@@ -1,0 +1,57 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <filter>
+  	<filter-name>LoadFilter</filter-name>
+  	<display-name>LoadFilter</display-name>
+  	<description></description>
+  	<filter-class>bg.tu_varna.sit.petshop.filter.LoadFilter</filter-class>
+  </filter>
+  <filter>
+  	<filter-name>CoocieFilter</filter-name>
+  	<display-name>CoocieFilter</display-name>
+  	<description></description>
+  	<filter-class>bg.tu_varna.sit.petshop.filter.CoocieFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>LoadFilter</filter-name>
+  	<url-pattern>/LoadFilter</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>CoocieFilter</filter-name>
+  	<url-pattern>/CoocieFilter</url-pattern>
+  </filter-mapping>
+  <servlet>
+  	<servlet-name>GetPetServlet</servlet-name>
+  	<display-name>GetPetServlet</display-name>
+  	<description></description>
+  	<servlet-class>bg.tu_varna.dit.petshop.servlets.GetPetServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>PetServlet</servlet-name>
+  	<display-name>PetServlet</display-name>
+  	<description></description>
+  	<servlet-class>bg.tu_varna.dit.petshop.servlets.PetServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CoocieServlet</servlet-name>
+  	<display-name>CoocieServlet</display-name>
+  	<description></description>
+  	<servlet-class>bg.tu_varna.dit.petshop.servlets.CoocieServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>GetPetServlet</servlet-name>
+  	<url-pattern>/GetPetServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>PetServlet</servlet-name>
+  	<url-pattern>/PetServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CoocieServlet</servlet-name>
+  	<url-pattern>/CoocieServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
