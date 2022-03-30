@@ -9,7 +9,7 @@ public class UserList {
     private ArrayList<User> users;
 
     public ArrayList<User> getUserBeans() {
-        return new ArrayList<User>(){{
+        return new ArrayList<User>() {{
             add(new User("name", new Login("user@mail.com", "pass")));
         }};
     }

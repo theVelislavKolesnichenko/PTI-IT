@@ -24,8 +24,16 @@ public class Repository {
         return instance;
     }
 
+    public boolean hasExist(User user) {
+        return users.contains(user);
+    }
+
     public boolean hasExist(Login login) {
-        return users.contains(new User(login));
+        for (User user : users) {
+            if (user.getLogin().equals(login))
+                return true;
+        }
+        return false;
     }
 
     public void addUser(User user) {

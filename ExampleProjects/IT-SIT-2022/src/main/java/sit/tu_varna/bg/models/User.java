@@ -7,14 +7,37 @@ public class User {
     private String jobTitle;
     private String info;
     private Login login;
+    private Contact contact;
+    private Skills skills;
+
+    public User(String name,
+                String jobTitle,
+                String info,
+                Login login,
+                Contact contact,
+                Skills skills) {
+        this.name = name;
+        this.jobTitle = jobTitle;
+        this.info = info;
+        this.login = login;
+        this.contact = contact;
+        this.skills = skills;
+    }
 
     public User(String name, Login login) {
-        this.name = name;
-        this.login = login;
+        this(name, null, null, login, null, null);
     }
 
     public User(Login login) {
         this("", login);
+    }
+
+    public Skills getSkills() {
+        return skills;
+    }
+
+    public Contact getContact() {
+        return contact;
     }
 
     public void setName(String name) {

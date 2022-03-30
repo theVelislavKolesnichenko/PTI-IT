@@ -1,21 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<%@ page import="sit.tu_varna.bg.models.User" %>
 <!DOCTYPE html>
 <html>
 <jsp:include page="../shared/head.jsp"/>
 <body>
 <jsp:include page="../shared/header.jsp"/>
 
+<%
+  User user = (User) request.getAttribute("user");
+%>
+
 <div class="center">
 
-  <%if(request.getAttribute("message") == null) {%>
-  <div>
-    <h2>Добър ден с ТУ Варна</h2>
-    <form action="cookie" method="post">
-      <input type="submit" value="затвори"/>
-    </form>
-  </div>
-  <%} %>
+<%--  <%if(request.getAttribute("message") == null) {%>--%>
+<%--  <div>--%>
+<%--    <h2>Добър ден с ТУ Варна</h2>--%>
+<%--    <form action="cookie" method="post">--%>
+<%--      <input type="submit" value="затвори"/>--%>
+<%--    </form>--%>
+<%--  </div>--%>
+<%--  <%} %>--%>
 
   <div class="grid">
     <div class="grid-30 bg-yellow b-r-5 m-r-5 m-l-5 m-t-20">
@@ -30,15 +34,15 @@
       <h2>Профилна информация</h2>
       <div class="">
         <label>Име:</label>
-        <span>Name></span>
+        <span><%=user.getName()%></span>
       </div>
       <div class="m-t-20">
         <label>Работа:</label>
-        <span>JobTitle</span>
+        <span><%=user.getJobTitle()%></span>
       </div>
       <div class="m-t-20">
         <label>Описание:</label>
-        <span class="justify">Info</span>
+        <span class="justify"><%=user.getInfo()%></span>
       </div>
     </div>
 <%--    <div class="m-r-5 m-l-5 m-t-20">--%>
