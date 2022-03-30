@@ -6,20 +6,11 @@ import sit.tu_varna.bg.models.User;
 import java.util.ArrayList;
 
 public class UserList {
-    private ArrayList<User> userBeans;
+    private ArrayList<User> users;
 
     public ArrayList<User> getUserBeans() {
         return new ArrayList<User>(){{
-            new User("user1", new Login("name", "pass"));
-            new User("user1", new Login("name", "pass"));
-            new User("user1", new Login("name", "pass"));
-            new User("user1", new Login("name", "pass"));
-            new User("user1", new Login("name", "pass"));
-            new User("user1", new Login("name", "pass"));
+            add(new User("name", new Login("user@mail.com", "pass")));
         }};
-    }
-
-    public void setUserBeans(ArrayList<User> userBeans) {
-        this.userBeans = userBeans;
     }
 }

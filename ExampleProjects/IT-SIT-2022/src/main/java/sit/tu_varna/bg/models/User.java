@@ -4,6 +4,8 @@ import java.util.Objects;
 
 public class User {
     private String name;
+    private String jobTitle;
+    private String info;
     private Login login;
 
     public User(String name, Login login) {
@@ -13,6 +15,30 @@ public class User {
 
     public User(Login login) {
         this("", login);
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getJobTitle() {
+        return jobTitle;
+    }
+
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
+    }
+
+    public void setLogin(Login login) {
+        this.login = login;
     }
 
     public String getName() {

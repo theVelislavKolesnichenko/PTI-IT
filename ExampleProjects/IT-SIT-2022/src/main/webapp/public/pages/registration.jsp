@@ -6,9 +6,19 @@
 <body>
 <jsp:include page="../shared/header.jsp"/>
 
+<%
+    String errorMessage = (String) request.getAttribute("errorMessage");
+%>
+
 <div class="center">
     <h1>Създаване на профил</h1>
     <div class="bg-yellow b-radius-5 p-20 m-t-20 grid">
+
+        <% if(errorMessage != null) { %>
+        <div class="m-t-20 c-red">
+            <%= errorMessage %>
+        </div>
+        <% } %>
         <form action="register" method="post">
 
             <div class="m-t-20">

@@ -6,6 +6,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import sit.tu_varna.bg.models.Login;
+import sit.tu_varna.bg.repositories.Repository;
 
 import java.io.IOException;
 
@@ -15,6 +17,14 @@ import java.io.IOException;
                 "/index.jsp",
                 "/index.html"})
 public class LoginServlet extends HttpServlet {
+
+    private Repository repository;
+
+    @Override
+    public void init() throws ServletException {
+        repository = Repository.getInstance();
+    }
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/public/pages/login.jsp");
@@ -26,10 +36,10 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        response.sendRedirect("/IT_SIT_2022_war_exploded/public/pages/profile.jsp");
-//        response.getWriter().append("POST Served at: ")
-//                .append(request.getContextPath())
-//                .append(username)
-//                .append(password);
+        if (repository.hasExist(new Login(username, password))) {
+            response.sendRedirect("/IT_SIT_2022_war_exploded/public/pages/profile.jsp");
+        } else {
+            response.sendRedirect(request.getContextPath());
+        }
     }
 }

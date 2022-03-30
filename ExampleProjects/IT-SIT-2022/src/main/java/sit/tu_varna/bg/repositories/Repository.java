@@ -8,13 +8,20 @@ import java.util.HashSet;
 
 public class Repository {
 
-    static Repository instance = null;
+    private static Repository instance = null;
 
-    HashSet<User> users = new HashSet<User>();
-    static int index = 1;
+    //static
+    private HashSet<User> users; //= new HashSet<User>(new UserList().getUserBeans());
 
-    public Repository() {
+    private Repository() {
         users = new HashSet<>(new UserList().getUserBeans());
+    }
+
+    public static Repository getInstance() {
+        if (instance == null) {
+            instance = new Repository();
+        }
+        return instance;
     }
 
     public boolean hasExist(Login login) {
