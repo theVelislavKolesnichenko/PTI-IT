@@ -6,7 +6,9 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import sit.tu_varna.bg.models.Login;
+import sit.tu_varna.bg.models.User;
 import sit.tu_varna.bg.repositories.Repository;
 
 import java.io.IOException;
@@ -41,7 +43,11 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        if (repository.hasExist(new Login(username, password))) {
+        User user = repository.getUserByLogin(new Login(username, password));
+        if (user != null) {
+            HttpSession session = request.getSession(true);
+            session.setAttribute("user", user);
+
             response.sendRedirect(String.format(request.getContextPath() + "/user?username=%s", username));
         } else {
             response.sendRedirect(request.getContextPath());

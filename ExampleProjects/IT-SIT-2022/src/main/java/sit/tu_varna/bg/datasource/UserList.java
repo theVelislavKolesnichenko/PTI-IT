@@ -14,6 +14,17 @@ public class UserList {
     //                Contact contact,
     //                Skills skills)
     public ArrayList<User> getUserBeans() {
+
+        final Skills skills = new Skills();
+        skills.updateJobSkills("Java", (short) 10);
+        skills.updateJobSkills("HTML", (short) 20);
+        skills.updateJobSkills("CSS", (short) 30);
+        skills.updateJobSkills("JavaScript", (short) 40);
+
+        skills.updatePersonSkills("Комуникативност", (short) 50);
+        skills.updatePersonSkills("Работа в екип", (short) 60);
+        skills.updatePersonSkills("Креативност", (short) 70);
+
         return new ArrayList<User>() {{
             add(new User(
                     "Име Именно",
@@ -23,7 +34,7 @@ public class UserList {
                     new Login("user1", "pass"),
                     new Contact("email@email.com", "089874562,",
                             new Address("Варна", "ул. Студентска 1")),
-                    new Skills()));
+                    skills));
         }};
     }
 }

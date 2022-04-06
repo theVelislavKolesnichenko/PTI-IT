@@ -22,11 +22,15 @@ public class Skills {
     }
 
     public void updateJobSkills(String name, short value) {
-        jobSkills.add(new Skill(name, value));
+        Skill skill = new Skill(name, value);
+        jobSkills.remove(skill);
+        jobSkills.add(skill);
     }
 
     public void updatePersonSkills(String name, short value) {
-        personSkills.add(new Skill(name, value));
+        Skill skill = new Skill(name, value);
+        personSkills.remove(skill);
+        personSkills.add(skill);
     }
 
     public Set<Skill> getJobSkills() {

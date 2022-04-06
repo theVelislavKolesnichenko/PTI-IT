@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="sit.tu_varna.bg.models.User" %>
+<%@ page import="sit.tu_varna.bg.models.Skill" %>
 <!DOCTYPE html>
 <html>
 <jsp:include page="../shared/head.jsp"/>
@@ -8,6 +9,7 @@
 
 <%
   User user = (User) request.getAttribute("user");
+  //User user = (User) session.getAttribute("user");
 %>
 
 <div class="center">
@@ -46,33 +48,33 @@
       </div>
     </div>
 
-<%--    <div class="m-r-5 m-l-5 m-t-20">--%>
-<%--      <h2 class="m-t-20">Умения</h2>--%>
-<%--      <div class="bg-white b-r-10 f-s-0 p-20">--%>
-<%--        <div class="grid-50 f-s-16 d-l-b left" style="vertical-align: top;">--%>
-<%--          <h3 class="m-l-30">Професионални</h3>--%>
-<%--          <%for(SkillBeen skill : user.getJobsSkills()) {%>--%>
-<%--          <div class="m-t-20 m-l-30">--%>
-<%--            <label class="c-blue"><%=skill.getName()%></label>--%>
-<%--            <div class="m-t-10 bg-yellow" style="height: 5px; width: 100%">--%>
-<%--              <div class="bg-blue" style="height: 5px; width: <%=skill.getValue()%>%"></div>--%>
-<%--            </div>--%>
-<%--          </div>--%>
-<%--          <%} %>--%>
-<%--        </div>--%>
-<%--        <div class="grid-50 f-s-16 d-l-b left" style="vertical-align: top;">--%>
-<%--          <h3 class="m-l-30">Личностни</h3>--%>
-<%--          <%for(SkillBeen skill : user.getPersonSkills()) {%>--%>
-<%--          <div class="m-t-20 m-l-30">--%>
-<%--            <label class="c-blue"><%=skill.getName()%></label>--%>
-<%--            <div class="m-t-10 bg-yellow" style="height: 5px; width: 100%">--%>
-<%--              <div class="bg-blue" style="height: 5px; width: <%=skill.getValue()%>%"></div>--%>
-<%--            </div>--%>
-<%--          </div>--%>
-<%--          <%} %>--%>
-<%--        </div>--%>
-<%--      </div>--%>
-<%--    </div>--%>
+    <div class="m-r-5 m-l-5 m-t-20">
+      <h2 class="m-t-20">Умения</h2>
+      <div class="bg-white b-r-10 f-s-0 p-20">
+        <div class="grid-50 f-s-16 d-l-b left" style="vertical-align: top;">
+          <h3 class="m-l-30">Професионални</h3>
+          <%for(Skill skill : user.getSkills().getJobSkills()) {%>
+          <div class="m-t-20 m-l-30">
+            <label class="c-blue"><%=skill.getName()%></label>
+            <div class="m-t-10 bg-yellow" style="height: 5px; width: 100%">
+              <div class="bg-blue" style="height: 5px; width: <%=skill.getValue()%>%"></div>
+            </div>
+          </div>
+          <%} %>
+        </div>
+        <div class="grid-50 f-s-16 d-l-b left" style="vertical-align: top;">
+          <h3 class="m-l-30">Личностни</h3>
+          <%for(Skill skill : user.getSkills().getPersonSkills()) {%>
+          <div class="m-t-20 m-l-30">
+            <label class="c-blue"><%=skill.getName()%></label>
+            <div class="m-t-10 bg-yellow" style="height: 5px; width: 100%">
+              <div class="bg-blue" style="height: 5px; width: <%=skill.getValue()%>%"></div>
+            </div>
+          </div>
+          <%} %>
+        </div>
+      </div>
+    </div>
 
       <div class="m-r-5 m-l-5 m-t-20">
       <h2 class="m-t-20">Контакти</h2>

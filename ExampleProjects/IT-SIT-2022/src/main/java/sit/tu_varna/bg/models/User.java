@@ -3,11 +3,14 @@ package sit.tu_varna.bg.models;
 import java.util.Objects;
 
 public class User {
+    //Task 1
     private String name;
+    private Login login;
+
     private String jobTitle;
     private String info;
+
     private String imageName;
-    private Login login;
     private Contact contact;
     private Skills skills;
 
@@ -28,7 +31,13 @@ public class User {
     }
 
     public User(String name, Login login) {
-        this(name, null, null, null, login, null, null);
+        this(name,
+                null,
+                null,
+                "male.svg",
+                login,
+                new Contact(null, null, new Address(null, null)),
+                new Skills());
     }
 
     public User(Login login) {

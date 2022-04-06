@@ -22,7 +22,6 @@ public class UserServlet extends HttpServlet {
     public void init() throws ServletException {
         super.init();
         repository = Repository.getInstance();
-
     }
 
     @Override
@@ -31,7 +30,9 @@ public class UserServlet extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
 
-        User user = repository.getUserByUsername(new Login(username));
+        User user = username != null
+                ? repository.getUserByUsername(new Login(username))
+                : (User) request.getSession().getAttribute("user");
 
         if (user != null) {
             request.setAttribute("user", user);
