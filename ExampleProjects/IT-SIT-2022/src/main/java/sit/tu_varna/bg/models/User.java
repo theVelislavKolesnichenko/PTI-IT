@@ -6,6 +6,7 @@ public class User {
     private String name;
     private String jobTitle;
     private String info;
+    private String imageName;
     private Login login;
     private Contact contact;
     private Skills skills;
@@ -13,6 +14,7 @@ public class User {
     public User(String name,
                 String jobTitle,
                 String info,
+                String imageName,
                 Login login,
                 Contact contact,
                 Skills skills) {
@@ -20,12 +22,13 @@ public class User {
         this.jobTitle = jobTitle;
         this.info = info;
         this.login = login;
+        this.imageName = imageName;
         this.contact = contact;
         this.skills = skills;
     }
 
     public User(String name, Login login) {
-        this(name, null, null, login, null, null);
+        this(name, null, null, null, login, null, null);
     }
 
     public User(Login login) {
@@ -70,6 +73,22 @@ public class User {
 
     public Login getLogin() {
         return login;
+    }
+
+    public String getImageName() {
+        return imageName;
+    }
+
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
+    }
+
+    public void setContact(Contact contact) {
+        this.contact = contact;
+    }
+
+    public void setSkills(Skills skills) {
+        this.skills = skills;
     }
 
     @Override

@@ -1,6 +1,6 @@
 package sit.tu_varna.bg.models;
 
-public class Skill {
+public class Skill implements Comparable<Skill> {
     private String name;
     private short value;
 
@@ -15,5 +15,10 @@ public class Skill {
 
     public short getValue() {
         return value;
+    }
+
+    @Override
+    public int compareTo(Skill o) {
+        return this.getName().compareTo(o.getName());
     }
 }

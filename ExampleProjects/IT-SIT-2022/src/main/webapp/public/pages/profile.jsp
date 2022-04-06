@@ -23,7 +23,7 @@
 
   <div class="grid">
     <div class="grid-30 bg-yellow b-r-5 m-r-5 m-l-5 m-t-20">
-      <img style="width: 100%;" src="images/male.svg" />
+      <img style="width: 100%;" src="public/images/<%= user.getImageName() %>" />
     </div>
     <div class="left grid-60 b-r-5 m-r-5 m-l-5 m-t-20">
 <%--      <%if(user.getId() == sessionUser.getId()) {%>--%>
@@ -45,6 +45,7 @@
         <span class="justify"><%=user.getInfo()%></span>
       </div>
     </div>
+
 <%--    <div class="m-r-5 m-l-5 m-t-20">--%>
 <%--      <h2 class="m-t-20">Умения</h2>--%>
 <%--      <div class="bg-white b-r-10 f-s-0 p-20">--%>
@@ -72,33 +73,34 @@
 <%--        </div>--%>
 <%--      </div>--%>
 <%--    </div>--%>
-<%--    <div class="m-r-5 m-l-5 m-t-20">--%>
-<%--      <h2 class="m-t-20">Контакти</h2>--%>
-<%--      <div class="bg-white b-r-10 f-s-0 p-20">--%>
-<%--        <div class="grid-50 f-s-16 d-l-b left">--%>
-<%--          <div class="m-l-30">--%>
-<%--            <label class="c-blue">Имейл</label>--%>
-<%--            <a class="d-b m-t-10 c-yellow" href="mailto:<%=user.getUsername()%>"><%=user.getUsername()%></a>--%>
-<%--          </div>--%>
-<%--          <div class="m-t-20 m-l-30">--%>
-<%--            <label class="c-blue">Телефон</label>--%>
-<%--            <a class="d-b m-t-10 c-yellow" href="tel:<%=user.getPhone()%>"><%=user.getPhone()%></a>--%>
-<%--          </div>--%>
-<%--        </div>--%>
 
-<%--        <div class="grid-50 f-s-16 d-l-b left">--%>
-<%--          <div class="m-l-30"]>--%>
-<%--            <label class="c-blue">Град</label>--%>
-<%--            <span class="d-b m-t-10 c-yellow"><%=user.getAddress().getName()%></span>--%>
-<%--          </div>--%>
-<%--          <div class="m-t-20 m-l-30">--%>
-<%--            <label class="c-blue">Улица</label>--%>
-<%--            <span class="d-b m-t-10 c-yellow"><%=user.getAddress().getStreet()%></span>--%>
-<%--          </div>--%>
-<%--        </div>--%>
+      <div class="m-r-5 m-l-5 m-t-20">
+      <h2 class="m-t-20">Контакти</h2>
+      <div class="bg-white b-r-10 f-s-0 p-20">
+        <div class="grid-50 f-s-16 d-l-b left">
+          <div class="m-l-30">
+            <label class="c-blue">Имейл</label>
+            <a class="d-b m-t-10 c-yellow" href="mailto:<%=user.getContact().getEmail()%>"><%=user.getContact().getEmail()%></a>
+          </div>
+          <div class="m-t-20 m-l-30">
+            <label class="c-blue">Телефон</label>
+            <a class="d-b m-t-10 c-yellow" href="tel:<%=user.getContact().getPhone()%>"><%=user.getContact().getPhone()%></a>
+          </div>
+        </div>
 
-<%--      </div>--%>
-<%--    </div>--%>
+        <div class="grid-50 f-s-16 d-l-b left">
+          <div class="m-l-30"]>
+            <label class="c-blue">Град</label>
+            <span class="d-b m-t-10 c-yellow"><%=user.getContact().getAddress().getCity()%></span>
+          </div>
+          <div class="m-t-20 m-l-30">
+            <label class="c-blue">Улица</label>
+            <span class="d-b m-t-10 c-yellow"><%=user.getContact().getAddress().getStreet()%></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
 </div>
 <jsp:include page="../shared/footer.jsp"/>

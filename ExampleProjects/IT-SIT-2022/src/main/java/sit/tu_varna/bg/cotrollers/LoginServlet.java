@@ -42,8 +42,7 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
 
         if (repository.hasExist(new Login(username, password))) {
-            response.sendRedirect(
-                    request.getContextPath() + "/public/pages/profile.jsp");
+            response.sendRedirect(String.format(request.getContextPath() + "/user?username=%s", username));
         } else {
             response.sendRedirect(request.getContextPath());
         }
