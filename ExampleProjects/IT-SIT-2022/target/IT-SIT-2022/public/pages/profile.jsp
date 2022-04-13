@@ -9,30 +9,30 @@
 
 <%
   User user = (User) request.getAttribute("user");
-  //User user = (User) session.getAttribute("user");
+  User sessionUser = (User) session.getAttribute("user");
 %>
 
 <div class="center">
 
-<%--  <%if(request.getAttribute("message") == null) {%>--%>
-<%--  <div>--%>
-<%--    <h2>Добър ден с ТУ Варна</h2>--%>
-<%--    <form action="cookie" method="post">--%>
-<%--      <input type="submit" value="затвори"/>--%>
-<%--    </form>--%>
-<%--  </div>--%>
-<%--  <%} %>--%>
+  <%if(request.getAttribute("message") == null) {%>
+  <div>
+    <h2>Добър ден с ТУ Варна</h2>
+    <form action="cookie" method="post">
+      <input type="submit" value="затвори"/>
+    </form>
+  </div>
+  <%} %>
 
   <div class="grid">
     <div class="grid-30 bg-yellow b-r-5 m-r-5 m-l-5 m-t-20">
       <img style="width: 100%;" src="public/images/<%= user.getImageName() %>" />
     </div>
     <div class="left grid-60 b-r-5 m-r-5 m-l-5 m-t-20">
-<%--      <%if(user.getId() == sessionUser.getId()) {%>--%>
-<%--      <div class="right">--%>
-<%--        <a href="user?id=<%=user.getId()%>&action=edit" class="button">Редактиране</a>--%>
-<%--      </div>--%>
-<%--      <%} %>--%>
+      <%if(user.equals(sessionUser)) {%>
+      <div class="right">
+        <a href="user/edit" class="button">Редактиране</a>
+      </div>
+      <%} %>
       <h2>Профилна информация</h2>
       <div class="">
         <label>Име:</label>

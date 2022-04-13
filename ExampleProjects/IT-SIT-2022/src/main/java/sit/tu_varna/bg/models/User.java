@@ -7,13 +7,14 @@ public class User {
     private String name;
     private Login login;
 
+    private String imageName;
     private String jobTitle;
     private String info;
 
-    private String imageName;
-    private Contact contact;
     private Skills skills;
 
+    private Contact contact;
+    
     public User(String name,
                 String jobTitle,
                 String info,
@@ -114,5 +115,11 @@ public class User {
     @Override
     public int hashCode() {
         return Objects.hash(login);
+    }
+
+    public void update(User newUser) {
+        this.setName(newUser.getName());
+        this.setJobTitle(newUser.getJobTitle());
+        this.setInfo(newUser.getInfo());
     }
 }

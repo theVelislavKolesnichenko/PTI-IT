@@ -57,4 +57,11 @@ public class Repository {
         }
         return null;
     }
+
+    public void update(User user, User newUser) {
+        user.update(newUser);
+//        User updateUser = this.getUserByUsername(user.getLogin());
+//        updateUser.update(newUser);
+//        this.addUser(updateUser);
+    }
 }

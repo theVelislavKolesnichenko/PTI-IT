@@ -6,14 +6,13 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import sit.tu_varna.bg.models.Login;
 import sit.tu_varna.bg.models.User;
 import sit.tu_varna.bg.repositories.Repository;
 
 import java.io.IOException;
 
-@WebServlet(name="ProfileServlet", urlPatterns = {"/user"})
-public class UserServlet extends HttpServlet {
+@WebServlet(name="UserEditServlet", urlPatterns = {"/user/edit"})
+public class UserEditServlet extends HttpServlet {
 
     private Repository repository;
 
@@ -24,18 +23,15 @@ public class UserServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("username");
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
 
-        User user = username != null
-                ? repository.getUserByUsername(new Login(username))
-                : (User) request.getSession().getAttribute("user");
+        User user = (User) request.getSession().getAttribute("user");
 
         if (user != null) {
             request.setAttribute("user", user);
             RequestDispatcher requestDispatcher =
-            request.getRequestDispatcher("/public/pages/profile.jsp");
+                    request.getRequestDispatcher("/public/pages/profile_edit.jsp");
             requestDispatcher.forward(request, response);
         } else {
             response.sendRedirect(request.getContextPath());
@@ -44,6 +40,15 @@ public class UserServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String name = request.getParameter("name");
+        String job = request.getParameter("job");
+        String info = request.getParameter("info");
 
+        User newUser = new User(name, job, info, null, null, null, null);
+        User sessionUser = (User) request.getSession().getAttribute("user");
+
+        sessionUser.update(newUser);
+
+        response.sendRedirect(String.format("%s/user", request.getContextPath()));
     }
 }
