@@ -1,5 +1,6 @@
 package sit.tu_varna.bg.models;
 
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -23,14 +24,18 @@ public class Skills {
 
     public void updateJobSkills(String name, short value) {
         Skill skill = new Skill(name, value);
-        jobSkills.remove(skill);
-        jobSkills.add(skill);
+        if (jobSkills.contains(skill)) {
+            jobSkills.remove(skill);
+            jobSkills.add(skill);
+        }
     }
 
     public void updatePersonSkills(String name, short value) {
         Skill skill = new Skill(name, value);
-        personSkills.remove(skill);
-        personSkills.add(skill);
+        if (personSkills.contains(skill)) {
+            personSkills.remove(skill);
+            personSkills.add(skill);
+        }
     }
 
     public Set<Skill> getJobSkills() {
@@ -39,5 +44,13 @@ public class Skills {
 
     public Set<Skill> getPersonSkills() {
         return personSkills;
+    }
+
+    public boolean update(Map<String, Short> skills) {
+        for (Map.Entry<String, Short> entry : skills.entrySet()) {
+            updateJobSkills(entry.getKey(), entry.getValue());
+            updatePersonSkills(entry.getKey(), entry.getValue());
+        }
+        return true;
     }
 }

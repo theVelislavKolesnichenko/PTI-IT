@@ -1,5 +1,6 @@
 package sit.tu_varna.bg.models;
 
+import java.util.Map;
 import java.util.Objects;
 
 public class User {
@@ -117,9 +118,14 @@ public class User {
         return Objects.hash(login);
     }
 
-    public void update(User newUser) {
+    public boolean update(User newUser) {
         this.setName(newUser.getName());
         this.setJobTitle(newUser.getJobTitle());
         this.setInfo(newUser.getInfo());
+        return true;
+    }
+
+    public boolean update(Map<String, Short> skills) {
+        return this.skills.update(skills);
     }
 }

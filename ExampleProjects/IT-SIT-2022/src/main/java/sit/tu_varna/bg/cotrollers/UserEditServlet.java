@@ -1,5 +1,6 @@
 package sit.tu_varna.bg.cotrollers;
 
+import com.google.gson.Gson;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -15,10 +16,12 @@ import java.io.IOException;
 public class UserEditServlet extends HttpServlet {
 
     private Repository repository;
+    private Gson gson;
 
     @Override
     public void init() throws ServletException {
         repository = Repository.getInstance();
+        gson = new Gson();
     }
 
     @Override
@@ -31,7 +34,8 @@ public class UserEditServlet extends HttpServlet {
         if (user != null) {
             request.setAttribute("user", user);
             RequestDispatcher requestDispatcher =
-                    request.getRequestDispatcher("/public/pages/profile_edit.jsp");
+                    //request.getRequestDispatcher("/public/pages/profile_edit.jsp");
+                    request.getRequestDispatcher("/public/pages/profile_edit_ajax.jsp");
             requestDispatcher.forward(request, response);
         } else {
             response.sendRedirect(request.getContextPath());

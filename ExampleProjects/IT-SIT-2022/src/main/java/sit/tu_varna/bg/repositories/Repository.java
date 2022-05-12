@@ -64,4 +64,8 @@ public class Repository {
 //        updateUser.update(newUser);
 //        this.addUser(updateUser);
     }
+
+    public HashSet<User> getUsers() {
+        return users;
+    }
 }

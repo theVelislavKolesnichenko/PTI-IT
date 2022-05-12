@@ -14,7 +14,7 @@
 
 <div class="center">
 
-  <%if(request.getAttribute("message") == null) {%>
+  <%if((boolean)request.getAttribute("message")) {%>
   <div>
     <h2>Добър ден с ТУ Варна</h2>
     <form action="cookie" method="post">

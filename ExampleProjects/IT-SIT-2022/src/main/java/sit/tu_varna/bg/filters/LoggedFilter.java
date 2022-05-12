@@ -11,7 +11,7 @@ import sit.tu_varna.bg.models.User;
 import java.io.IOException;
 
 @WebFilter(urlPatterns = { "/login", "/register" },
-        servletNames = {"LoginServlet", "RegistrationServlet"})
+        servletNames = {"LoginServlet", "RegistrationServlet", ""})
 public class LoggedFilter implements Filter {
     public void init(FilterConfig config) throws ServletException {
     }
