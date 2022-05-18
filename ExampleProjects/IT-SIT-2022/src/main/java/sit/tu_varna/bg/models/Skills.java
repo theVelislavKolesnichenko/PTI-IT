@@ -1,11 +1,18 @@
 package sit.tu_varna.bg.models;
 
+import javax.xml.bind.annotation.*;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
+@XmlRootElement(name = "skills")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Skills {
+    @XmlElementWrapper(name = "jobsSkills")
+    @XmlElement(name = "skill")
     private Set<Skill> jobSkills;
+    @XmlElementWrapper(name = "personSkills")
+    @XmlElement(name = "skill")
     private Set<Skill> personSkills;
 
     public Skills() {

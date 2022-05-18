@@ -1,10 +1,18 @@
 package sit.tu_varna.bg.models;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Objects;
 
+@XmlRootElement(name = "login")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Login {
     private String username;
     private String password;
+
+    public Login() {
+    }
 
     public Login(String username, String password) {
         this.username = username;

@@ -1,20 +1,28 @@
 package sit.tu_varna.bg.repositories;
 
 import sit.tu_varna.bg.datasource.UserList;
+import sit.tu_varna.bg.datasource.Users;
 import sit.tu_varna.bg.models.Login;
 import sit.tu_varna.bg.models.User;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.HashSet;
 
+@XmlRootElement(name = "users")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Repository {
 
     private static Repository instance = null;
 
-    //static
-    private HashSet<User> users; //= new HashSet<User>(new UserList().getUserBeans());
+    //static private HashSet<User> users = new HashSet<User>(new UserList().getUserBeans());
+    static private HashSet<User> users;
 
     private Repository() {
-        users = new HashSet<>(new UserList().getUserBeans());
+        /*users = new HashSet<>(new UserList().getUserBeans());
+        new Users().update(this.users);*/
+        users = new HashSet<>(new Users().getUserBeans());
     }
 
     public static Repository getInstance() {
@@ -38,6 +46,7 @@ public class Repository {
 
     public void addUser(User user) {
         users.add(user);
+        new Users().update(this.users);
     }
 
     public User getUserByLogin(Login login) {
@@ -60,9 +69,7 @@ public class Repository {
 
     public void update(User user, User newUser) {
         user.update(newUser);
-//        User updateUser = this.getUserByUsername(user.getLogin());
-//        updateUser.update(newUser);
-//        this.addUser(updateUser);
+        new Users().update(this.users);
     }
 
     public HashSet<User> getUsers() {

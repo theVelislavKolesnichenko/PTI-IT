@@ -1,8 +1,13 @@
 package sit.tu_varna.bg.models;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Map;
 import java.util.Objects;
 
+@XmlRootElement(name = "user")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class User {
     //Task 1
     private String name;
@@ -15,7 +20,10 @@ public class User {
     private Skills skills;
 
     private Contact contact;
-    
+
+    public User() {
+    }
+
     public User(String name,
                 String jobTitle,
                 String info,

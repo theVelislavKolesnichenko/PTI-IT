@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="users" type="usersType"/>
+  <xs:complexType name="loginType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="username">
+      </xs:element>
+      <xs:element type="xs:string" name="password"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="skillType">
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="CSS"/>
+            <xs:enumeration value="HTML"/>
+            <xs:enumeration value="Java"/>
+            <xs:enumeration value="JavaScript"/>
+            <xs:enumeration value="Комуникативност"/>
+            <xs:enumeration value="Креативност"/>
+            <xs:enumeration value="Работа в екип"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:int" name="value">
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="jobsSkillsType">
+    <xs:sequence>
+      <xs:element type="skillType" name="skill" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="personSkillsType">
+    <xs:sequence>
+      <xs:element type="skillType" name="skill" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="skillsType">
+    <xs:sequence>
+      <xs:element type="jobsSkillsType" name="jobsSkills"/>
+      <xs:element type="personSkillsType" name="personSkills"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addressType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="city"/>
+      <xs:element type="xs:string" name="street"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="contactType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="email">
+      </xs:element>
+      <xs:element type="xs:string" name="phone"/>
+      <xs:element type="addressType" name="address"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="userType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="name">
+      </xs:element>
+      <xs:element type="xs:string" name="login"/>
+      <xs:element type="xs:string" name="imageName"/>
+      <xs:element type="xs:string" name="jobTitle"/>
+      <xs:element type="xs:string" name="info"/>
+      <xs:element type="skillsType" name="skills"/>
+      <xs:element type="contactType" name="contact"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usersType">
+    <xs:sequence>
+      <xs:element type="userType" name="user" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,3 +1,4 @@
+
 function postUserInfo() {
     debugger
     const formData = toJSONString(document.querySelector('form.user-info'));
@@ -22,24 +23,29 @@ function postUserInfo() {
     return false;
 }
 
-function postUserSkill() {
+function postUserSkills() {
     debugger
     const formData = toJSONString(document.querySelector('form.user-skill'));
+
     fetch('UserEditUserSkillServlet', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json', 'Accept': 'application/json'
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
         },
         body: formData
-    })
-        .then((response) => {
+    }).then((response) => {
             return response.json();
-        })
-        .then((data) => {
-            var element = document.getElementById('user_skill_message');
-            element.innerHTML = data.message;
-            console.log(data);
-            console.log(data.userBean);
+        }).then((json) => {
+            /*
+            {
+                message: "Записано"
+            }
+            * */
+            var element =
+                document.getElementById('user_skill_message');
+            element.innerHTML = json.message;
+            console.log(json);
         });
 
     return false;
@@ -68,7 +74,8 @@ function postUserContact() {
 function toJSONString( form ) {
     console.log(form);
     var obj = {};
-    var elements = form.querySelectorAll( "input, select, textarea" );
+    var elements = form
+        .querySelectorAll( "input, select, textarea" );
 
     for( var i = 0; i < elements.length; ++i ) {
         var element = elements[i];
@@ -83,30 +90,27 @@ function toJSONString( form ) {
     return JSON.stringify( obj );
 }
 
-const editUserInfo = async (e) => {
-    debugger
-    e.preventDefault()
-    debugger
-    const formData = toJSONString(document.querySelector('form.user-info'));
-     const formObj = document.querySelector('form.user-info');
-     const fData = new FormData(formObj);
-     console.log(fData.getAll());
-    // debugger
-    const response = await fetch('UserEditInfoServlet', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json', 'Accept': 'application/json'
-        },
-        body: formData
-    });
-
-    const json = await response.json();
-    console.log(json);
-    debugger
-    let element = document.getElementById('user_info_message');
-    element.innerHTML = json.message;
-    console.log(json);
-
-
-    return false;
-}
+// const editUserInfo = async (e) => {
+//     debugger
+//     e.preventDefault()
+//     debugger
+//     const formData = toJSONString(document.querySelector('form.user-info'));
+//
+//     const response = await fetch('UserEditInfoServlet', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json', 'Accept': 'application/json'
+//         },
+//         body: formData
+//     });
+//
+//     const json = await response.json();
+//     console.log(json);
+//     debugger
+//     let element = document.getElementById('user_info_message');
+//     element.innerHTML = json.message;
+//     console.log(json);
+//
+//
+//     return false;
+// }
