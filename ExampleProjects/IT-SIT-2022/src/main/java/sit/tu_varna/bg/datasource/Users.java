@@ -26,12 +26,13 @@ public class Users implements DataContext {
 
     public Users() {
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(Objects.requireNonNull(classLoader.getResource("data/users.xml")).getFile());
+        File file = new File(
+                Objects.requireNonNull(
+                        classLoader.getResource("data/users.xml"))
+                        .getFile());
         System.out.println(file.getAbsolutePath());
         fileName = file.getAbsolutePath();
     }
-
-
 
     @Override
     public ArrayList<User> getUserBeans() {

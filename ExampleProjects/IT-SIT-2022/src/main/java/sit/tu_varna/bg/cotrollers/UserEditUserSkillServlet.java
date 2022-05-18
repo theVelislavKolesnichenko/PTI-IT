@@ -36,7 +36,7 @@ public class UserEditUserSkillServlet extends HttpServlet {
         User sessionUser = (User) request.getSession().getAttribute("user");
 
         JsonResult result = new JsonResult();
-        if(sessionUser.update(skills)) {
+        if(repository.update(sessionUser, skills)) {
             result.setMessage("Записа се");
         } else {
             result.setMessage("Не се Записа");

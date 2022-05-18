@@ -3,8 +3,7 @@
   <xs:element name="users" type="usersType"/>
   <xs:complexType name="loginType">
     <xs:sequence>
-      <xs:element type="xs:string" name="username">
-      </xs:element>
+      <xs:element type="xs:string" name="username"/>
       <xs:element type="xs:string" name="password"/>
     </xs:sequence>
   </xs:complexType>
@@ -23,8 +22,7 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element type="xs:int" name="value">
-      </xs:element>
+      <xs:element type="xs:int" name="value"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="jobsSkillsType">
@@ -51,17 +49,15 @@
   </xs:complexType>
   <xs:complexType name="contactType">
     <xs:sequence>
-      <xs:element type="xs:string" name="email">
-      </xs:element>
+      <xs:element type="xs:string" name="email"/>
       <xs:element type="xs:string" name="phone"/>
       <xs:element type="addressType" name="address"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="userType">
     <xs:sequence>
-      <xs:element type="xs:string" name="name">
-      </xs:element>
-      <xs:element type="xs:string" name="login"/>
+      <xs:element type="xs:string" name="name"/>
+      <xs:element type="loginType" name="login"/>
       <xs:element type="xs:string" name="imageName"/>
       <xs:element type="xs:string" name="jobTitle"/>
       <xs:element type="xs:string" name="info"/>

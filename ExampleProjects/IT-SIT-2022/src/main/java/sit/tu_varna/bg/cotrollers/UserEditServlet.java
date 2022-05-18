@@ -51,7 +51,8 @@ public class UserEditServlet extends HttpServlet {
         User newUser = new User(name, job, info, null, null, null, null);
         User sessionUser = (User) request.getSession().getAttribute("user");
 
-        sessionUser.update(newUser);
+        //sessionUser.update(newUser);
+        repository.update(sessionUser, newUser);
 
         response.sendRedirect(String.format("%s/user", request.getContextPath()));
     }

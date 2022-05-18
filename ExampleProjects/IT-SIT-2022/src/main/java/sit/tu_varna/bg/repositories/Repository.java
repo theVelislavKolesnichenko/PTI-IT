@@ -3,15 +3,15 @@ package sit.tu_varna.bg.repositories;
 import sit.tu_varna.bg.datasource.UserList;
 import sit.tu_varna.bg.datasource.Users;
 import sit.tu_varna.bg.models.Login;
+import sit.tu_varna.bg.models.Skill;
 import sit.tu_varna.bg.models.User;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.HashSet;
+import java.util.Map;
 
-@XmlRootElement(name = "users")
-@XmlAccessorType(XmlAccessType.FIELD)
 public class Repository {
 
     private static Repository instance = null;
@@ -67,9 +67,16 @@ public class Repository {
         return null;
     }
 
-    public void update(User user, User newUser) {
-        user.update(newUser);
+    public boolean update(User user, User newUser) {
+        boolean result = user.update(newUser);
         new Users().update(this.users);
+        return result;
+    }
+
+    public boolean update(User user, Map<String, Short> skills) {
+        boolean result = user.update(skills);
+        new Users().update(this.users);
+        return result;
     }
 
     public HashSet<User> getUsers() {

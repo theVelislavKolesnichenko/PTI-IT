@@ -22,6 +22,7 @@ public class User {
     private Contact contact;
 
     public User() {
+
     }
 
     public User(String name,
@@ -42,11 +43,11 @@ public class User {
 
     public User(String name, Login login) {
         this(name,
-                null,
-                null,
+                "",
+                "",
                 "male.svg",
                 login,
-                new Contact(null, null, new Address(null, null)),
+                new Contact("", "", new Address("", "")),
                 new Skills());
     }
 
