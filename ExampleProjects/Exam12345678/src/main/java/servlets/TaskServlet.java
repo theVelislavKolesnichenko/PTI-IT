@@ -2,6 +2,7 @@ package servlets;
 
 import datasource.TaskRepository;
 import datasource.UuidRepository;
+import helpers.CookieHelper;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -29,10 +30,17 @@ public class TaskServlet extends HttpServlet {
         if (message != null) {
             request.setAttribute("message", message);
             session.invalidate();
-        } else {
-            Cookie cookie = new Cookie("uuid", uuidRepository.crate());
-            cookie.setMaxAge(new Date().getDate() + 10860);
-            response.addCookie(cookie);
+        }
+        else {
+            Cookie cookie = CookieHelper.getCookie(request);
+            if (cookie == null) {
+                String uuid = uuidRepository.crate();
+                session.setAttribute("uuis", uuid);
+                Cookie new_cookie = new Cookie("uuid", uuid);
+                new_cookie.setMaxAge(new Date().getDate() + 10860);
+                response.addCookie(new_cookie);
+            }
+
         }
 
         request.setAttribute("tasks", taskRepository.getTasks());

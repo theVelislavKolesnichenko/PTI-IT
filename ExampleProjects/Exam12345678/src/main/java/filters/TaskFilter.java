@@ -1,6 +1,7 @@
 package filters;
 
 import datasource.UuidRepository;
+import helpers.CookieHelper;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.*;
 import jakarta.servlet.http.Cookie;
@@ -27,28 +28,25 @@ public class TaskFilter implements Filter {
         HttpServletRequest httpServletRequest = (HttpServletRequest) request;
         HttpSession session = httpServletRequest.getSession(true);
 
-        Cookie cookies[] = httpServletRequest.getCookies();
-        Cookie cookie = null;
-        for (Cookie item : cookies) {
-            if ("uuid".equals(item.getName())) {
-                cookie = item;
-                break;
-            }
-        }
+        Cookie cookie = CookieHelper.getCookie(httpServletRequest);
 
-        if (cookie == null || (cookie != null && cookie.getMaxAge() > 0 && uuidRepository.exist(cookie.getValue()))) {
+        if ("GET".equals(httpServletRequest.getMethod()) || (cookie != null && uuidRepository.exist(cookie.getValue()))) {
             chain.doFilter(request, response);
         }
 
-        if (cookie != null && cookie.getMaxAge() < 0) {
-            uuidRepository.remove(cookie.getValue());
+        String uuid = (String) session.getAttribute("uuid");
+        if (cookie == null) {
+            if ( uuid != null) {
+                uuidRepository.remove(uuid);
+                session.removeAttribute("uuid");
+            }
             session.setAttribute("message", "message_1");
             cookie.setMaxAge(0);
             httpServletResponse.addCookie(cookie);
             httpServletResponse.sendRedirect(String.format("%s/", httpServletRequest.getContextPath()));
         }
 
-        if (cookie != null && cookie.getMaxAge() > 0 && !uuidRepository.exist(cookie.getValue())) {
+        if (cookie != null && !uuidRepository.exist(cookie.getValue())) {
             session.setAttribute("message", "message_2");
             cookie.setMaxAge(0);
             httpServletResponse.addCookie(cookie);
